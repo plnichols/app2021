@@ -1,11 +1,12 @@
 import React from 'react';
-import './card.scss';
+import './Card.scss';
 
-export default function Card({ title, subtitle }) {
+export default function Card({ title, subtitle, children }) {
   return (
     <div className="card">
-      <span className="cardTitle">{title}</span>
-      <span className="cardSubtitle">{subtitle}</span>
+      {title && <span className="cardTitle">{title}</span>}
+      {subtitle && <span className="cardSubtitle">{subtitle}</span>}
+      {children && <div>{children}</div>}
     </div>
   );
 }
