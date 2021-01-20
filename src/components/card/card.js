@@ -6,7 +6,7 @@ export default function Card({ title, subtitle, children }) {
     <div className="card">
       {title && <span className="cardTitle">{title}</span>}
       {subtitle && <span className="cardSubtitle">{subtitle}</span>}
-      {children && <div>{children}</div>}
+      {children && <div className="cardContent">{children}</div>}
     </div>
   );
 }

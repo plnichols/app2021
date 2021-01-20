@@ -1,0 +1,25 @@
+.currency {
+  display: flex;
+  align-items: baseline;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.currencyName {
+  flex: 0 0 auto;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+.currencyDots {
+  flex: 1 1 auto;
+  margin: 0 2px;
+  border-bottom: 1px dotted #ccc;
+}
+
+.currencyAmount {
+  flex: 0 1 auto;
+  font-size: 12px;
+  color: #666;
+}

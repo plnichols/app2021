@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
-import dummy from './dummy';
+import wallet from './wallet';
 
 const reducer = combineReducers({
-  dummy,
+  wallet,
 });
 
 const store = configureStore({
