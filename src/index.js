@@ -1,20 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import Header from './components/Header/Header';
-import Card from './components/Card/Card';
-import Panel from './components/Panel/Panel';
+import Wallet from './modules/Wallet/Wallet';
 import './index.scss';
 
 function App({ year }) {
   return (
     <>
       <Header title={`Welcome to the App ${year}`} />
-      <Panel>
-        <Card title={`App ${year}`} subtitle="Onyx Commodities" />
-      </Panel>
+      <Wallet title="Wallet" subtitle="Currencies" />
     </>
   );
 }
 
-var mountNode = document.getElementById('root');
-ReactDOM.render(<App year="2021" />, mountNode);
+ReactDOM.render(
+  <Provider store={store}>
+    <App year="2021" />
+  </Provider>,
+  document.getElementById('root')
+);
