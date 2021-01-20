@@ -1,0 +1,33 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background-color: #fafafa;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &::backdrop {
+    background-color: #fafafa;
+  }
+}
+
+strong,
+b {
+  font-weight: bolder;
+}
