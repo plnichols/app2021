@@ -10,7 +10,7 @@ import './index.scss';
 function App({ year }) {
   return (
     <>
-      <Header title={`Welcome to the App ${year}`} />
+      <Header title={`Wallet ${year}`} />
       <Wallet title="Wallet" subtitle="Currencies" />
     </>
   );

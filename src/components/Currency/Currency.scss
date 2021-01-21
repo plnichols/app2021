@@ -2,12 +2,25 @@
   display: flex;
   align-items: baseline;
   text-align: left;
-  margin-bottom: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+.currencyIsNegative {
+  & > span {
+    color: red;
+  }
 }
 
 .currencyName {
   flex: 0 0 auto;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
   color: #333;
 }
@@ -20,6 +33,24 @@
 
 .currencyAmount {
   flex: 0 1 auto;
-  font-size: 12px;
+  font-size: 13px;
   color: #666;
+  margin-right: 10px;
+}
+
+.currencyButtons {
+  flex: 0 1 auto;
+
+  & button {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
 }

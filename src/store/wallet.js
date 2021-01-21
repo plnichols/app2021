@@ -15,7 +15,7 @@ const wallet = createSlice({
         if (currency.name === action.payload.name) {
           return {
             ...currency,
-            amount: parseFloat(currency.amount + action.payload.name),
+            amount: parseFloat(currency.amount + action.payload.amount),
           };
         }
 
@@ -27,7 +27,7 @@ const wallet = createSlice({
         if (currency.name === action.payload.name) {
           return {
             ...currency,
-            amount: parseFloat(currency.amount - action.payload.name),
+            amount: parseFloat(currency.amount - action.payload.amount),
           };
         }
 
@@ -76,17 +76,17 @@ export const load = () => async (dispatch) => {
   }
 };
 
-export const increment = ({ currency, amount }) => async (dispatch) => {
+export const increment = (name, amount) => async (dispatch) => {
   try {
-    dispatch(incrementSuccess(currency, amount));
+    dispatch(incrementSuccess({ name, amount }));
   } catch (e) {
     return console.error(e.message);
   }
 };
 
-export const logout = ({ currency, amount }) => async (dispatch) => {
+export const decrement = (name, amount) => async (dispatch) => {
   try {
-    return dispatch(decrementSuccess(currency, amount));
+    dispatch(decrementSuccess({ name, amount }));
   } catch (e) {
     return console.error(e.message);
   }
